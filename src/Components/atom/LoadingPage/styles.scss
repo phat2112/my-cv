@@ -1,0 +1,19 @@
+.loading-container{
+    position: fixed;
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.4);
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .anticon{
+        font-size:40px;
+        color: #667eea;
+    }
+    h2{
+        color: #667eea;
+
+    }
+}

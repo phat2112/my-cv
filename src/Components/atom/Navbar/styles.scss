@@ -1,0 +1,105 @@
+.navbar{
+    width: 20vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    background:rgba(0,0,0, .2);
+    position: relative;
+    &-container{
+        position: absolute;
+        top: 25%;
+        width: 80%;
+        right: 0;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    &-item{
+        margin-bottom: 10px;
+        transition: .4s;
+        height: 50px;
+        padding-left: 15px;
+        line-height: 10px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        display: flex;
+        align-items:Center;
+        cursor: pointer;
+        .anticon{
+            margin-right: 15px;
+    
+        }
+        a{
+            color: #fff;
+            text-decoration: none!important;
+        }
+        &:hover{
+            background: rgba(0,0,0,.1);
+            
+            .anticon{
+                color: #fff;
+            }
+            a{
+                color: #000;
+            }
+        }
+        &:focus{
+            background: rgba(0,0,0,.1);
+            
+            .anticon{
+                color: #fff;
+            }
+            a{
+                color: #000;
+            }
+        }
+    }
+    &-banner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        .anticon{
+            font-size: 60px;
+            color: #5E5EEB
+        }
+        .anticon-download{
+            font-size: 20px;
+        }
+        a{
+            border: 1px solid #5E5EEB;
+            width: 15vw;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px
+        }
+    }
+}
+.navbar-contact{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    top: 50%;
+    font-size: 20px;
+    left: 3%;
+   &-item{
+       width:40px;
+       height:40px;
+       border-radius: 50%;
+       background: rgba(#5E5EEB, .4);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       cursor:pointer;
+       transition:.4s;
+       &:hover{
+           background: #5E5EEB;
+           color: rgba(#fff ,.7);
+       }
+   }
+}

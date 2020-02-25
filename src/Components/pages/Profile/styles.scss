@@ -1,0 +1,173 @@
+.profile{
+    .profile-title{
+        margin-top: 3em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 20px;
+    }
+}
+.profile-block{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    margin-bottom: 3em;
+    .profile-infomation{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0 15px;
+        background: rgba(0,0,0,.1);
+        box-shadow: 0 0 3px 2px rgba(0,0,0,.1);
+        .image-block{
+            width: 350px;
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+            img{
+                position: absolute;
+                max-width: 100%;
+                top: 10%;
+            }
+        }
+        .profile-content{
+            margin-left: 15px;
+            flex: 1;
+            .profile-location{
+                font-weight: 700;
+                color: rgba(0,0,0, .4);
+            }
+        }
+    }
+}
+.profile-experience{
+    &-block{
+        display: flex;
+        align-items: center;
+        p{
+            margin: 0;
+            margin-left: 10px;
+        }
+    }
+}
+.profile-skill{
+    width: 50%;
+    padding: 20px;
+    margin-top: 20px;
+    background: rgba(0,0,0,.1);
+    height: fit-content;    
+    box-shadow: 0 0 3px 2px rgba(0,0,0,.1);
+    .profile-program{
+        display: flex;
+        justify-content: space-between;
+    }
+    .profile-bar{
+        border: 1px solid #000;
+        height: 20px;
+        border-radius: 10px;
+        position: relative;
+        overflow:hidden;
+        box-shadow: inset 0 0 5px 2px rgba(0,0,0,.2);
+        span{
+            position: absolute;
+            height:100%;
+            width:80%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to right, #667eea, #8E37D7);
+            border-radius: 20px;
+        }
+        .profile-basicskill-bar{
+            width:80%;
+            animation: autoFill 1s linear;
+        }
+        .profile-framework-bar{
+            width:50%;
+            animation: autoFill50 1s linear;
+        }
+    }
+}
+.profile-education{
+    flex: 1 1;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 20px;
+    padding-top: 0;
+    background: rgba(0,0,0,.1);
+    box-shadow: 0 0 3px 2px rgba(0,0,0,.1);
+}
+.profile-education-location{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile-job-experience{
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    padding-top: 20px;
+    background: rgba(0,0,0,.1);
+    box-shadow: 0 0 3px 2px rgba(0,0,0,.1);
+    &-block{
+        margin-left: 20px;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background: rgba(0,0,0,.1);
+            left: -20px;
+        }
+    }
+}
+.profile-job-office{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-job-office-location, .profile-education-image{
+    width: 150px;
+    height:150px;
+    display: flex;
+    align-items: center;
+    img{
+        max-width:100%;
+    }
+}
+.profile-experience-title{
+    display: flex;
+    align-items:center;
+    div{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        left: -29px;
+        background: linear-gradient(to right, #667eea, #8E37D7);
+        top: 10px;
+    }
+    h1{
+        margin: 0;
+    }
+}
+@keyframes autoFill{
+    0%{
+        width: 0;
+    }
+    100%{
+        width:80%;
+    }
+}
+@keyframes autoFill50{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 50%;
+    }
+}

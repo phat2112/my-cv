@@ -1,0 +1,115 @@
+.project{
+    margin-top: 3em;
+    padding-left: 17px;
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &-item{
+            width: 400px;
+            height: 300px;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            img{
+                max-width: 100%;
+                position: absolute;
+                object-fit: cover;
+                height: 300px;
+            }
+            &:hover{
+                .project-list-content{
+                    opacity: 1;
+                }
+                .project-list-showinfo{
+                   box-shadow: 0 0 0 500px #25aae1;
+                   .anticon{
+                       opacity: 0;
+                   }
+                }
+            }
+        }
+        &-content{
+            position: absolute;
+            top: 0;
+            font-size: 15px;
+            opacity: 0;
+            transition: .2s;
+            color:#fff;
+            height: 100%;
+            padding: 0 16px;
+            h1{
+                text-align: center;
+                color:#fff;
+
+            }
+            h4{
+                color:#fff;
+                margin: 0;
+            }
+        }
+        &-detail{
+            display: flex;
+            margin-bottom: 10px;
+            p{
+                margin: 0;
+                margin-left: 10px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+       &-showinfo{
+           position: absolute;
+           bottom: 10%;
+           width: 50px;
+           height: 50px;
+           border-radius: 50%;
+           right:10%;
+           background: #25aae1;
+           box-shadow: 0 0 0 0 #25aae1;
+           display:flex;
+           justify-content: center;
+           align-items: center;
+           font-size:20px;
+           transition: .4s;
+           .anticon{
+               opacity: 1;
+           }
+       }
+      
+    }
+    &-status{
+        display:flex;
+        justify-content: center;
+        margin: 30px 0 ;
+        button{
+            width: 113px;
+            height: 40px;
+            border: none;
+            border-radius: 20px;
+            background: linear-gradient(to right, #25aae1, #3f86ed);
+            font-size: 20px;
+            color: #fff;
+            &:focus{
+                outline: none;
+            }
+       }
+    }
+}
+.first-project{
+    animation: slide 1s linear;
+}
+.sec-project{
+    animation: slide 2s linear;
+}
+@keyframes slide{
+    0%{
+        margin-top: 60px;
+        opacity: 0;
+    }
+    100%{
+        margin-top: 0;
+        opacity: 1;
+    }
+}

@@ -1,6 +1,21 @@
 .project{
     margin-top: 3em;
     padding-left: 17px;
+    &-container{
+        .ant-tabs-tabpane{
+            height:auto!important;
+        }
+        .ant-tabs-bar{
+            border-bottom: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .ant-tabs-tab-active{
+            border:2px solid #40a9ff;
+        }
+    }
     &-list{
         display: flex;
         flex-wrap: wrap;
@@ -102,6 +117,10 @@
 }
 .sec-project{
     animation: slide 2s linear;
+}
+.project-tab{
+    display: flex;
+    justify-content: space-around;
 }
 @keyframes slide{
     0%{
